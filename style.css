@@ -1,0 +1,151 @@
+body {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#todo-container {
+  background: rgba(41, 33, 33, 0.9);
+  width: 420px;
+  margin: 0 auto;
+  border: 2px solid rgba(0, 51, 255, 0.6);
+  padding: 20px;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+#header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+#quote-box {
+  margin: 15px 0;
+  font-style: italic;
+  font-size: 16px;
+  color: #f3eefd;
+  min-height: 22px;
+}
+
+/* Input area */
+#todo-form {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+#input-box {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#input-button {
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.25s;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2e60ea;
+  color: white;
+}
+#input-button:hover { transform: translateY(-2px); }
+
+/* Task list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 18px;
+  text-align: left;
+}
+
+li {
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.02);
+}
+
+/* Label (checkbox + text) */
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1; /* so actions stay on the right */
+}
+
+label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.task-text {
+  word-break: break-word;
+}
+
+/* action buttons */
+.edit-btn,
+.delete-btn {
+  color: #ffd6e8;
+  cursor: pointer;
+  margin-left: 6px;
+  font-size: 13px;
+  text-decoration: underline;
+  user-select: none;
+}
+
+.delete-btn { color: #ffb3b3; }
+
+.completed .task-text {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* Inline edit input style */
+.inline-edit {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Progress Bar */
+.progress-container {
+  width: 90%;
+  margin: 18px auto 6px;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 18px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#progress-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  transition: width 0.5s ease;
+}
+
+#progress-text {
+  color: white;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
